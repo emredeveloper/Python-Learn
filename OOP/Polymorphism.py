@@ -5,7 +5,7 @@ class Animal:
     def eat(self):
         print(f"{self.name} is eating")
 
-    def sleep(self):
+    def sleep(self) -> object:
         print(f"{self.name} is sleeping")
 
     def move(self):
@@ -27,9 +27,9 @@ class Cat(Animal):
 class Hayvan:
     def hayvan(self, hayvan: Animal):
         print("Hayvanın ismi: ", hayvan.name)
-        print("Hayvanın eat metodu: ", hayvan.eat())
-        print("Hayvanın sleep metodu: ", hayvan.sleep)
-        print("Hayvanın move metodu: ", hayvan.move)
+        print(hayvan.name+"'ın yemek metodu: ", hayvan.eat())
+        print(hayvan.name+"'ın sleep metodu: ", hayvan.sleep())
+        print(hayvan.name+"'ın move metodu: ", hayvan.move())
 
 
 def main():
@@ -46,9 +46,9 @@ def main():
     cat.meow()
     cat.scratch()
 
-hayvan = Hayvan()
-hayvan.hayvan(dog)
-hayvan.hayvan(cat)
+dog = Dog("Kangal")
 
 if __name__ == "__main__":
     main()
+hayvan = Hayvan()
+hayvan.hayvan(dog)
