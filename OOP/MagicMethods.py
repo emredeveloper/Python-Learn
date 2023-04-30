@@ -1,4 +1,5 @@
-class Araba:
+"""
+ Araba:
     def __init__(self, marka, model, renk):
         self.marka = marka
         self.model = model
@@ -72,10 +73,9 @@ ikincisayi = toplama(50,20)
 print(ilksayi > ikincisayi)
 print(ilksayi + ikincisayi)
 print(ilksayi == ikincisayi)
-print(len(ilksayi))
-print(len(ikincisayi))
 
-"""
+
+
 Tabii ki! İşte bazı yaygın olarak kullanılan özel metodlar:
 
 - `__init__(self, ...)` : Bir sınıfın örneklerinin oluşturulması için kullanılan kurucu metoddur. Sınıfın özelliklerini (instance variable) tanımlamak ve başlatmak için kullanılır.
@@ -91,3 +91,17 @@ Tabii ki! İşte bazı yaygın olarak kullanılan özel metodlar:
 
 Bu sadece birkaç örnek, ama Python'da birçok özel metod bulunur. İhtiyaç duyduğunuz özel metodlara, sınıflarınıza ve projelerinize uygun olacak şekilde özelleştirerek kullanabilirsiniz.
 """
+
+class Train():
+    def __init__(self,name):
+        self.name = name
+    def __getitem__(self, item):
+
+        return self.name[item]
+    def __delitem__(self, key):
+        return self.name[key]
+    print("silindi")
+
+train = Train("Tren")
+print(train.name[0])
+print(train[0])
