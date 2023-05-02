@@ -5,11 +5,12 @@ class Animal:
     def eat(self):
         print(f"{self.name} is eating")
 
-    def sleep(self) -> object:
+    def sleep(self):
         print(f"{self.name} is sleeping")
 
     def move(self):
         print(f"{self.name} is moving")
+
 
 class Dog(Animal):
     def bark(self):
@@ -18,20 +19,32 @@ class Dog(Animal):
     def wag_tail(self):
         print(f"{self.name} is wagging its tail")
 
+
 class Cat(Animal):
     def meow(self):
         print(f"{self.name} is meowing")
 
     def scratch(self):
         print(f"{self.name} is scratching")
-class Hayvan:
-    def hayvan(self, hayvan: Animal):
-        print("Hayvanın ismi: ", hayvan.name)
-        print(hayvan.name+"'ın yemek metodu: ", hayvan.eat())
-        print(hayvan.name+"'ın sleep metodu: ", hayvan.sleep())
-        print(hayvan.name+"'ın move metodu: ", hayvan.move())
 
 
+class Hayvan(Dog):
+
+    def __init__(self,isim):
+        super().__init__(isim)
+
+
+
+    def durum(self):
+        hayvan.eat()
+        hayvan.sleep()
+        hayvan.move()
+        hayvan.bark()
+        hayvan.wag_tail()
+
+
+
+""""
 def main():
     # Create some animals
     dog = Dog("Sparky")
@@ -45,10 +58,12 @@ def main():
     cat.eat()
     cat.meow()
     cat.scratch()
+"""
 
 dog = Dog("Kangal")
 
-if __name__ == "__main__":
-    main()
-hayvan = Hayvan()
-hayvan.hayvan(dog)
+
+hayvan = Hayvan("Pitbull")
+print(hayvan.durum())
+
+# hayvan.durum(dog)
