@@ -62,7 +62,8 @@ def main():
 
 dog = Dog("Kangal")
 
-
+cat = Cat("Mimar")
+print(cat.eat())
 hayvan = Hayvan("Pitbull")
 print(hayvan.durum())
 
